@@ -1,0 +1,89 @@
+.root {
+    -fx-background-color: white;
+    -fx-text-fill: #000000;
+}
+
+.label{
+    -fx-text-fill: black;
+    
+}
+
+.text-field{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-width: 1px;
+    -fx-border-color: #706f70;
+}
+
+.text-area{
+    -fx-background-color: white;
+    -fx-text-fill: #363636;
+    -fx-border-width: 3px;
+    -fx-border-color: #b8b8b8;
+    -fx-border-radius:10;
+}
+
+.text-area:focused{
+    -fx-background-color: white;
+    -fx-text-fill: #363636;
+}
+
+.text-area .content{
+    -fx-background-color: white;
+    -fx-text-fill: #363636; 
+}
+
+.radio-button{
+    -fx-text-fill: black;
+}
+
+.button{
+    -fx-background-color: #337AB7;
+    -fx-text-fill: white;
+}
+
+.gameButton{
+    -fx-border-width: 5px;
+    -fx-background-color: #ccd8e3;
+    -fx-background-radius:0;
+    -fx-text-fill: #194978;
+}
+.gameButton:hover{
+    -fx-border-width: 5px;
+    -fx-background-color: derive( #ccd8e3, -60% );
+}
+
+.buttonX{
+    -fx-background-image: url('CrossImg.png');
+     -fx-background-repeat: no-repeat;
+     -fx-background-color: white;
+     -fx-background-size: contain;
+     -fx-background-position: 9px;
+}
+.buttonO{
+    -fx-background-image: url('CircleImg.png');
+    -fx-background-repeat: no-repeat;
+     -fx-background-color: white;
+    -fx-background-size: contain; 
+    -fx-background-position: 9px;
+  
+}
+
+.dialog-pane:header .header-panel{
+    -fx-background-color: white;
+}
+
+.dialog-pane .label{
+    -fx-text-fill: black;
+}
+.connectionImage{
+	-fx-image: url('ConImg.png');
+}
+.logoImage{
+	-fx-image: url('logoImg.png');
+}
+.sendImage{
+	-fx-image: url('sendImg.png');
+}
+
+

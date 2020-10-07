@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FieldTest" project="ProjektKońcowy_Gierek_Moledowski" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="tests.FieldTest" time="0.0" displayname="FieldTest" uniqueid="[engine:junit-jupiter]/[class:tests.FieldTest]">
+    <testcase name="checkCorrectnessOfPortNumber" classname="tests.FieldTest" time="0.0" displayname="checkCorrectnessOfPortNumber()" uniqueid="[engine:junit-jupiter]/[class:tests.FieldTest]/[method:checkCorrectnessOfPortNumber()]"/>
+    <testcase name="checkFillNickName" classname="tests.FieldTest" time="0.0" displayname="checkFillNickName()" uniqueid="[engine:junit-jupiter]/[class:tests.FieldTest]/[method:checkFillNickName()]"/>
+    <testcase name="checkEmptyNickName" classname="tests.FieldTest" time="0.0" displayname="checkEmptyNickName()" uniqueid="[engine:junit-jupiter]/[class:tests.FieldTest]/[method:checkEmptyNickName()]"/>
+  </testsuite>
+</testrun>

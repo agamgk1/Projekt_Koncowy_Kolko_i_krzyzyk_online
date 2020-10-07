@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="451.0" prefWidth="427.0" spacing="10.0" stylesheets="@../res/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConnectionController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <children>
+      <Pane prefHeight="105.0" prefWidth="417.0">
+         <children>
+            <ImageView fitHeight="95.0" fitWidth="148.0" layoutX="14.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true" styleClass="logoImage" />
+            <Label layoutX="226.0" layoutY="21.0" prefHeight="63.0" prefWidth="177.0" text="Zestawienie połączenia">
+               <font>
+                  <Font name="Agency FB" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="417.0">
+         <children>
+            <Label text="Gracz: " HBox.hgrow="ALWAYS" />
+            <TextField fx:id="nicknameTextField" alignment="CENTER" maxHeight="30.0" minWidth="30.0" prefHeight="45.0" prefWidth="308.0" promptText="Twój nick:" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <RadioButton fx:id="XRadio" maxWidth="Infinity" mnemonicParsing="false" selected="true" text="X ">
+               <toggleGroup>
+                  <ToggleGroup fx:id="iconRadio" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="ORadio" maxWidth="Infinity" mnemonicParsing="false" selected="true" text="O" toggleGroup="$iconRadio">
+      </RadioButton>
+         </children>
+      </HBox>
+      <RadioButton fx:id="hostRadio" maxWidth="Infinity" mnemonicParsing="false" onAction="#disableConnectArea" prefHeight="17.0" prefWidth="255.0" selected="true" text="Host">
+         <toggleGroup>
+            <ToggleGroup fx:id="selectRadio" />
+         </toggleGroup>
+      </RadioButton>
+      <HBox alignment="CENTER">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="hostIPTextField" alignment="CENTER" maxHeight="30.0" maxWidth="196.0" minHeight="30.0" minWidth="196.0" prefHeight="30.0" prefWidth="215.0" promptText="Twój adres IP" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="hostPortTextField" alignment="CENTER" maxWidth="108.0" minWidth="108.0" prefHeight="30.0" prefWidth="127.0" promptText="Port" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="hostButton" maxHeight="-Infinity" maxWidth="72.0" minHeight="-Infinity" minWidth="72.0" mnemonicParsing="false" onAction="#hostButtonAction" pickOnBounds="false" prefHeight="30.0" prefWidth="72.0" snapToPixel="false" text="Host" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="6.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <RadioButton fx:id="connectRadio" maxWidth="Infinity" mnemonicParsing="false" onAction="#disableHostArea" text="Connect" toggleGroup="$selectRadio" />
+      <HBox alignment="CENTER" VBox.vgrow="NEVER">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="connectIPTextField" alignment="CENTER" maxHeight="196.0" maxWidth="196.0" minHeight="30.0" minWidth="196.0" prefHeight="30.0" prefWidth="229.0" promptText="Adres IP sieci" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="connectPortTextField" alignment="CENTER" maxWidth="108.0" minWidth="108.0" prefHeight="30.0" prefWidth="86.0" promptText="Port" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="connectionButton" maxWidth="72.0" minWidth="72.0" mnemonicParsing="false" onAction="#connectButtonAction" prefHeight="30.0" prefWidth="117.0" text="Połącz" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="417.0">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true" styleClass="connectionImage" />
+            <ProgressIndicator fx:id="hostIndicator" prefHeight="113.0" prefWidth="294.0" visible="false">
+               <opaqueInsets>
+                  <Insets left="100.0" />
+               </opaqueInsets>
+            </ProgressIndicator>
+         </children>
+         <opaqueInsets>
+            <Insets left="100.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
