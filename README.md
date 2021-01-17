@@ -1,6 +1,6 @@
 Projekt_Koncowy_Kolko_i_krzyzyk_online
 
-Techologies:
+Technologies:
 - Java 8
 - Java FX
 - CSS
