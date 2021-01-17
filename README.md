@@ -6,3 +6,6 @@ Technologies:
 - CSS
 - JUnit 5
 - SceneBuilder
+
+Connection scene
+![Bez tytułu](https://user-images.githubusercontent.com/64829285/104844828-a59f7780-58d2-11eb-9711-79387af2d7aa.jpg)
