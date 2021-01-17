@@ -1,4 +1,5 @@
 Projekt_Koncowy_Kolko_i_krzyzyk_online
+Online TicTacToe game with chat for players 
 
 Technologies:
 - Java 8
